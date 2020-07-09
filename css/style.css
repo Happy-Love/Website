@@ -1,0 +1,153 @@
+*{
+    box-sizing : border-box;
+}
+li{
+list-style: none;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+a{
+text-decoration: none;
+ 
+}
+body span{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: #361D37;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    z-index: 99;
+}
+
+.un_user:before{
+    display:inline-flex;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:#2BAC76;  
+    margin-right:10px;
+}
+.block{
+    border-bottom: 1px solid #481A49;
+}
+.block:last-child(0){
+    border-bottom: 0px;
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    
+
+}
+.left-sidebar{
+    max-width: 288px;
+    display:flex;
+    flex-wrap:nowrap;
+    flex-direction: column;
+     
+}
+.user_info{   
+    min-height: 93px;   
+    padding:20px 20px 20px 20px;
+    background:#3F0E40;
+}
+
+.user_title{
+    display:flex;
+    color:white;   
+}
+.user_name{
+    display:inline-flex;
+    color:white;
+}
+.user_img{
+    display:inline-flex;
+    width:60px;
+    border-radius:50%; 
+}
+.user{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.un_title{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+/*user_nav start*/
+.user_nav{
+    min-height:256px;
+    margin: 0;
+    padding: 40px;
+     
+    background:#3F0E40;
+}
+.list a{
+    color:#BEADBE;
+    font-weight: 500;
+    line-height: 16px;
+  
+}
+.list li{
+    margin-top:17px;
+}
+ 
+/*user_nav end*/
+
+.user_channels{
+    min-height:397px;
+    margin: 0;
+    padding: 40px;
+    background:#3F0E40;
+}
+.collapsible{
+    
+    cursor: pointer;
+    font-size:18px;
+    color:#BEADBE;
+    font-weight:bold;
+    outline: none;
+    margin-top:40px;
+    line-height: 21px;
+}
+.collapsible:last-child(0){
+    margin-top:40px;
+}
+.content{
+    overflow: hidden;
+    max-height:0;
+    transition: max-height 0.2s ease-out;
+}
+.directs{
+    margin-top:58px;
+}
+.channel_block{
+    display:flex;
+    justify-content: space-between;
+}
+.direct_block{
+
+}
+.add_channel{
+    cursor: pointer;
+    font-size:18px;
+    color:#BEADBE;
+    font-weight:bold;
+    outline: none;
+    margin-top:40px;
+    line-height: 21px;
+}
