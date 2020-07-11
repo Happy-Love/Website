@@ -52,11 +52,10 @@ body span{
 
 }
 .left-sidebar{
-    max-width: 288px;
+    width: 288px;
     display:flex;
     flex-wrap:nowrap;
-    flex-direction: column;
-     
+    flex-direction: column; 
 }
 .user_info{   
     min-height: 93px;   
@@ -128,6 +127,7 @@ body span{
     margin-top:40px;
 }
 .content{
+     
     overflow: hidden;
     max-height:0;
     transition: max-height 0.2s ease-out;
@@ -137,7 +137,7 @@ body span{
 }
 .channel_block{
     display:flex;
-    justify-content: space-between;
+    align-items: center;
 }
 .direct_block{
 
@@ -147,7 +147,16 @@ body span{
     font-size:18px;
     color:#BEADBE;
     font-weight:bold;
-    outline: none;
+     
     margin-top:40px;
-    line-height: 21px;
+     
+}
+.ml-auto{
+    margin-left:auto;
+}
+.mr-auto{
+    margin-right:auto;
+}
+.ml-25{
+    margin-left:10px;
 }
