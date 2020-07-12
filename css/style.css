@@ -9,8 +9,7 @@ ul{
     padding:0;
 }
 a{
-text-decoration: none;
- 
+text-decoration: none; 
 }
 body span{
     font-family: Roboto;
@@ -29,6 +28,13 @@ body span{
     padding-bottom: 4px;
     z-index: 99;
 }
+.ml-auto{
+    margin-left:auto;
+}
+.mr-auto{
+    margin-right:auto;
+}
+ 
 
 .un_user:before{
     display:inline-flex;
@@ -48,9 +54,12 @@ body span{
 .container{
     max-width: 1280px;
     margin: 0 auto;
+    display:flex;
+    align-items:stretch;
     
 
 }
+/* Left-sidebar start */
 .left-sidebar{
     width: 288px;
     display:flex;
@@ -58,7 +67,7 @@ body span{
     flex-direction: column; 
 }
 .user_info{   
-    min-height: 93px;   
+    max-height: 115px;   
     padding:20px 20px 20px 20px;
     background:#3F0E40;
 }
@@ -72,8 +81,8 @@ body span{
     color:white;
 }
 .user_img{
-    display:inline-flex;
     width:60px;
+    height:60px;
     border-radius:50%; 
 }
 .user{
@@ -139,9 +148,6 @@ body span{
     display:flex;
     align-items: center;
 }
-.direct_block{
-
-}
 .add_channel{
     cursor: pointer;
     font-size:18px;
@@ -151,12 +157,87 @@ body span{
     margin-top:40px;
      
 }
-.ml-auto{
-    margin-left:auto;
+
+/* Left-sidebar end */
+/* Middle-sidebar start */
+.middle-sidebar{
+    width: 692px;
+     
+    display:flex;
+    flex-wrap:nowrap;
+    flex-direction: column; 
 }
-.mr-auto{
-    margin-right:auto;
+.chat_info{
+    
+    min-height: 115px;   
+    background:#FFFFFF;
+    padding:20px 20px 20px 20px;
 }
-.ml-25{
-    margin-left:10px;
+.channel_info{
+    font-weight: bold;
+    font-size: 18px;
+}
+.block1{
+    border-bottom: 1px solid #E2E2E2;
+}
+.chat_history{
+    
+    flex-grow:1;
+    height: 500px;
+    padding:20px; 
+    overflow-y: scroll;
+}
+.sender{
+    padding:20px;
+    display:flex;
+}
+.slacker_title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+}
+.slacker_desc{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+.description{
+    padding:0 20px 20px 20px;
+}
+.ml-10{
+    margin-right:10px;
+}
+.chat_message{
+    
+   
+    background: black;  
+    margin-top:auto;
+    display:flex;
+    align-items: center; 
+    justify-content: center;  
+}
+.chat_message_box{
+   
+    height:130px;
+     
+    background:green;
+    padding:10px;
+}
+.message_things{
+    display:flex;
+    
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color:#FFFFFF;  
+    align-items: center;
+    justify-content: center;
+    margin-left:auto; 
+}
+.send_message{
+
+    height:20px;
+}
+.text-form{
+    
 }
