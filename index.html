@@ -11,10 +11,18 @@
  
 <body>
     
-    <header class="header">       
-    </header>
+    
     <main class="slack-app">
+        <header class="header">  
+            <div class="header__img">
+                <a href="#"><img class="header__logo" src="img/png/slack.png" alt="Slack"/></a>
+            </div>
+            <div class="input-row">
+                <input class="search" placeholder="search info..." type="text"/>
+            </div>             
+        </header>
         <div class="container">
+            
             <!-- Left-sidebar start -->
             <div class="left-sidebar">
                 <div class="user_info block">
@@ -30,6 +38,7 @@
                         </div> 
                     </div>
                 </div>
+                
                 <div class="user_nav block">
                     <ul class="list">
                         <li><a class="link" href="#">Threads</a></li>
@@ -43,9 +52,10 @@
                 <div class="user_channels block">
                     <div class="channels">
                         <div class="channel_block">                        
-                            <span class="collapsible">Channels</span>
-                            <span class="add_channel ml-auto">Add new</span>        
+                            <span class="collapsible">Channels</span>  
+                            <span class="add_channel ">Add new</span>      
                         </div>
+                    
                         <div class="content">
                             <ul class="list">
                                 <li class="list"><a class="link" href="#">channel-1</a></li>
@@ -60,7 +70,7 @@
                     <div class="directs">
                         <div class="channel_block">
                             <span class="collapsible">Directs</span>
-                            <span class="add_channel ml-auto" href="#">Add new</a>    
+                            <span class="add_channel" href="#">Add new</a>   
                         </div>
                         <div class="content">
                             <ul class="list">
@@ -131,9 +141,26 @@
                     </div>
                 </div>
                 <div class="chat_message">
-                    <div class="chat_message_box">
-
-                    </div>     
+                    <div class="message_icons">
+                        <i class="fa fa-plus-circle"></i>
+                        <i class="fa fa-plus-camera"></i>
+                        <i class="fa fa-plus-microphone"></i>
+                        <i class="fa fa-plus-smile-o"></i>
+                    </div>
+                    <div class="input-group">
+                    
+                        <div class="create-message" contenteditable="true" aria-multiline="true">
+                           
+                        </div>
+                        
+                        <div class="send-message-btn">
+                            <button type="button" class="send-message">
+                            <img src="img/send.svg" alt="Отправить">
+                            </button>
+                        </div>    
+                         
+                         
+                    </div>    
                 </div>
             </div>
              
