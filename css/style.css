@@ -59,6 +59,9 @@ body span{
 .block{
     border-bottom: 1px solid #481A49;
 }
+.block2{
+    border-right:1px solid #E2E2E2;
+}
 .block:last-child(0){
     border-bottom: 0px;
 }
@@ -350,4 +353,7 @@ border:1px solid #614261;
 .search:hover {
     border:1px solid #937D94;
     color:#FAF9FA;
+}
+.white{
+    color:white;
 }

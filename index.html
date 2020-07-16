@@ -6,7 +6,7 @@
     <title>Slack-App</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">    
- 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>  
  
 <body>
@@ -50,9 +50,14 @@
                 </div>
                 <div class="user_channels block">
                     <div class="channels">
-                        <div class="channel_block">                        
+                        <div class="channel_block">
+                            <div class="">                        
+                            <i class="fa fa-caret-down white"></i>
                             <span class="collapsible">Channels</span>  
-                            <span class="add_channel ">Add new</span>      
+                            </div>
+                            <div class="add__new__plus">
+                                <span class="add_channel">Add new</span>
+                            </div>      
                         </div>
                     
                         <div class="content">
@@ -68,8 +73,13 @@
                     </div>
                     <div class="directs">
                         <div class="channel_block">
-                            <span class="collapsible">Directs</span>
-                            <span class="add_channel" href="#">Add new</a>   
+                            <div class="">                        
+                                <i class="fa fa-caret-down white"></i>
+                                <span class="collapsible">Directs</span>  
+                                </div>
+                                <div class="add__new__plus">
+                                    <span class="add_channel">Add new</span>
+                                </div>  
                         </div>
                         <div class="content">
                             <ul class="list">
@@ -88,10 +98,10 @@
             
             <!-- Middle-sidebar start -->
             <div class="middle-sidebar">  
-                <div class="chat_info block1">
+                <div class="chat_info block1 block2">
                     <span class="channel_info">#channel1</span>
                 </div>
-                <div class="chat_history">
+                <div class="chat_history block2">
                     <div class="sender">
                         <img class="user_img " src="img/avatar.svg" alt="">
                         <div class="description">
@@ -141,10 +151,10 @@
                 </div>
                 <div class="chat_message">
                     <div class="message_icons">
-                        <i class="fa fa-plus-circle"></i>
+                        <!-- <i class="fa fa-plus-circle"></i>
                         <i class="fa fa-plus-camera"></i>
                         <i class="fa fa-plus-microphone"></i>
-                        <i class="fa fa-plus-smile-o"></i>
+                        <i class="fa fa-plus-smile-o"></i> -->
                     </div>
                     <div class="input-group">
                     
