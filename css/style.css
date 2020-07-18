@@ -66,13 +66,17 @@ body span{
     border-bottom: 0px;
 }
 .container{
-    max-width: 1280px;
+    width:100%;
+     
     margin: 0 auto;
     display:flex;
+    height:100vh;
+    min-height: 100%;
     align-items:stretch;
     justify-content: center;
 
 }
+ 
 /* Left-sidebar start */
 .left-sidebar{
     min-width: 288px;
@@ -90,9 +94,7 @@ body span{
     background-color:#350D36;
     cursor: pointer;
 }
-.user_info:target{
-
-}
+ 
 .user_info:hover>.user>.user_name>span{
     color:white;
 }
@@ -133,9 +135,7 @@ body span{
 
 /*user_nav start*/
 .user_nav{
-    min-height:256px;
-    margin: 0;
-    padding:20px 0px 0px 0px;
+    min-height:350px;
     background:#3F0E40;
 }
 .list a{
@@ -172,9 +172,8 @@ body span{
 /*user_nav end*/
 
 .user_channels{
-    min-height:397px;
+    height:auto;
     margin: 0;
-    
     background:#3F0E40;
     flex-grow: 1;
 }
@@ -217,6 +216,7 @@ body span{
     display:flex;
     flex-wrap:nowrap;
     flex-direction: column; 
+    flex-grow: 1;
 }
 .chat_info{
     min-height: 115px;   
@@ -335,7 +335,7 @@ body span{
 }
  
 .header{
-    max-width:980px;
+    max-width:100%;
     width: 100%;
     margin: 0 auto;
     background: #361D37;
