@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Slack v2"; /* Гарнитура шрифта */
+    src: url(../slack-font/slack-icons-Regular.ttf); /* Путь к файлу со шрифтом */
+}
 *{
     box-sizing : border-box;   
 }
