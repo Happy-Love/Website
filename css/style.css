@@ -5,7 +5,12 @@ button{
     outline: none;
     cursor: pointer;
 }
-
+ul,li,a,span{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 div.create-message:empty::before {
     color: grey;
 }
@@ -47,15 +52,6 @@ body span{
 }
  
 
-.un_user:before{
-    display:inline-flex;
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color:#2BAC76;  
-    margin-right:10px;
-}
 .block{
     border-bottom: 1px solid #481A49;
 }
@@ -115,36 +111,69 @@ body span{
 .user_nav{
     min-height:256px;
     margin: 0;
-    padding: 40px;
+    padding:20px 0px 0px 0px;
     background:#3F0E40;
 }
 .list a{
+    padding:10px;
     color:#BEADBE;
     font-weight: 500;
     line-height: 16px;
-  
+    font-size:18px;
+    padding-left:40px;
+    padding-right:40px;
+    font-style:normal;
+    display:block;
 }
 .list li{
     margin-top:17px;
 }
- 
+.list li:last-child{
+    margin-top:17px;
+    padding:0px 0px 34px 0px;
+}
+.list li a:hover{
+    background:#350D36;
+}
+.list li a.link__public::before{
+    font-family: "Font Awesome 5 Free";
+    content:"\f292";
+    padding-right: 10px;
+    display: inline-block;
+    font-weight: 600;
+    vertical-align: middle;
+    font-size:12px;
+}
+.list li a.link__private::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f023";
+    display: inline-block;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-size:12px;
+    font-weight: 600;
+}
+    
 /*user_nav end*/
 
 .user_channels{
     min-height:397px;
     margin: 0;
-    padding: 40px;
+    
     background:#3F0E40;
     flex-grow: 1;
 }
 .collapsible{
-    width:60%;
+    
     cursor: pointer;
-    font-size:18px;
+    
     color:#BEADBE;
+  
+}
+.collapsible span{
+    font-size:20px !important;
     font-weight:bold;
     outline: none;
-    margin-top:40px;
     line-height: 21px;
 }
 .collapsible:last-child(0){
@@ -156,21 +185,23 @@ body span{
     max-height:0;
     transition: max-height 0.2s ease-out;
 }
-.directs{
-    margin-top:58px;
-}
+
 .channel_block{
     display:flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap:wrap;
+    padding:40px;
 }
-.add_channel{
-    cursor: pointer;
-    font-size:18px;
+.icon-add::before{
+    font-family: "Font Awesome 5 Free";
+    vertical-align: middle; 
+    display:inline-block;
+    font-size:15px;
     color:#BEADBE;
-    font-weight:bold;
-    margin-top:40px; 
+    font-style:normal;
+    font-weight: 600;
+    content:'\f067';
 }
 
 /* Left-sidebar end */
@@ -356,4 +387,49 @@ border:1px solid #614261;
 }
 .white{
     color:white;
+}
+.active{
+    background-color: #1164A3;
+    color:white !important;
+    width:100%;
+}
+.icon-threads::before,.icon-mentions::before,
+.icon-drafts::before,.icon-people::before,
+.icon-files::before,.icon-apps::before,
+.icon-bot--active:before, .icon-user--active:before{
+    display:inline-block;
+    font-family: "Slack v2";
+    font-style: normal;
+    font-weight: 400;
+    font-size:20px !important;
+    color:#BEADBE;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+.icon-threads::before{
+    content: "\E171";
+}
+.icon-mentions::before{
+    content: "\E009";
+}
+.icon-drafts:before{   
+    content: "\E059";
+}
+.icon-people::before{
+    content: "\E017";
+}
+.icon-apps::before{
+    content: "\E00A";
+}
+.icon-files::before{
+    content: "\E107";
+}
+
+.icon-user--active:before{
+    content: "\E508";
+    color:#2BAC76;
+}
+.icon-bot--active:before{
+    content: "\E515";
+    color:#2BAC76;
 }

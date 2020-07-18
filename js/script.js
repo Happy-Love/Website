@@ -1,12 +1,11 @@
 // топорно но пойдёт
 // Функция для открытия закрытия листа
 // Извините за плохой фронтэнд
-// Вариант №2 использовать цикл для поиска родителя в случае если сайт будет изменяться.
 let coll=document.getElementsByClassName('collapsible');
 for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener('click', function () { 
-    coll[i].previousElementSibling.classList.toggle("fa-caret-right")
-    coll[i].previousElementSibling.classList.toggle("fa-caret-down");
+    coll[i].firstElementChild.classList.toggle("fa-caret-right")
+    coll[i].firstElementChild.classList.toggle("fa-caret-down");
     let parent=coll[i];
     let content=coll[i];
     while(content.className!='content' ){

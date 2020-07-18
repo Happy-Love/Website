@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <style>
+         @font-face {
+    font-family: "Slack v2"; /* Гарнитура шрифта */
+    src: url(slack-font/slack-icons-Regular.ttf); /* Путь к файлу со шрифтом */
+    }
+    </style>
 </head>  
  
 <body>
@@ -14,9 +20,7 @@
     
     <main class="slack-app">
         <header class="header">  
-            <div class="header__img">
-                <a href="#"><img class="header__logo" src="img/png/slack.png" alt="Slack"/></a>
-            </div>
+        
             <div class="input-row">
                 <input class="search" placeholder="search info..." type="text"/>
             </div>             
@@ -30,7 +34,8 @@
                     </div>
                     <div class="user">  
                         <div class="user_name">
-                          <span class="un_user">Yura Matsiulka</span>
+                            <i class="icon-user--active"></i>
+                            <span>Yura Matsiulka</span>
                         </div>
                         <div class="user_img">
                             <img src="img/Youranus.jpg" alt="Ваша фотография" class="user_img"/>
@@ -38,60 +43,90 @@
                     </div>
                 </div>
                 
-                <div class="user_nav block">
+                <nav class="user_nav block">
                     <ul class="list">
-                        <li><a class="link" href="#">Threads</a></li>
-                        <li><a class="link" href="#">Mentions & reactions</a></li>
-                        <li><a class="link" href="#">Drafts</a></li>
-                        <li><a class="link" href="#">People</a></li>
-                        <li><a class="link" href="#">Files</a></li>
-                        <li><a class="link" href="#">Apps</a></li>
+                        <li><a class="link" href="#">
+                        <i class="icon-threads"></i>
+                            Threads
+                        </a></li>
+                        <li><a class="link" href="#">
+                            <i class="icon-mentions"></i>
+                            Mentions & reactions
+                        </a></li>
+                        <li>
+                            <a class="link" href="#">
+                                <i class="icon-drafts"></i>
+                                Drafts
+                        </a></li>
+                        <li>
+                            <a class="link" href="#">
+                                <i class="icon-people"></i>
+                                People
+                        </a></li>
+                        <li>
+                            <a class="link" href="#">
+                                <i class="icon-files"></i>
+                                Files
+                            </a></li>
+                        <li>
+                            <a class="link" href="#">
+                                <i class="icon-apps"></i>
+                                Apps</a>
+                            </li>
                     </ul>
-                </div>
+                </nav>
                 <div class="user_channels block">
                     <div class="channels">
                         <div class="channel_block">
-                            <div class="">                        
-                            <i class="fa fa-caret-down white"></i>
-                            <span class="collapsible">Channels</span>  
+                            <div class="collapsible">                      
+                            <i class="fa fa-caret-right white"></i>
+                            <span>Channels</span>  
                             </div>
                             <div class="add__new__plus">
-                                <span class="add_channel">Add new</span>
+                                <a href="#" class="link">
+                                    <i class="icon-add"></i>
+                                </a>
                             </div>      
                         </div>
                     
                         <div class="content">
                             <ul class="list">
-                                <li class="list"><a class="link" href="#">channel-1</a></li>
-                                <li><a class="link" href="#">channel-2</a></li>
-                                <li><a class="link" href="#">channel-3</a></li>
-                                <li><a class="link" href="#">channel-4</a></li>
-                                <li><a class="link" href="#">channel-5</a></li>
-                                <li><a class="link" href="#">channel-6</a></li>
+                                <li><a class="link__public active" href="#">channel-1</a></li>
+                                <li><a class="link__public" href="#">channel-2</a></li>
+                                <li><a class="link__public" href="#">channel-3</a></li>
+                                <li><a class="link__public" href="#">channel-4</a></li>
+                                <li><a class="link__public" href="#">channel-5</a></li>
+                                <li><a class="link__private" href="#">channel-6</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="directs">
                         <div class="channel_block">
-                            <div class="">                        
-                                <i class="fa fa-caret-down white"></i>
-                                <span class="collapsible">Directs</span>  
-                                </div>
-                                <div class="add__new__plus">
-                                    <span class="add_channel">Add new</span>
-                                </div>  
+                            <div class="collapsible">                       
+                                <i class="fa fa-caret-right white"></i>
+                                <span class="">Directs</span>  
+                            </div>
+                            <div class="add__new__plus">
+                                <a href="#" class="link">
+                                    <i class="icon-add"></i>
+                                </a>
+                            </div>  
                         </div>
                         <div class="content">
                             <ul class="list">
-                                <li><a class="link" href="#"><span class="un_user">Yura Matsiulka</span></a></li>
-                                <li><a class="link" href="#"><span class="un_user">Keck Greateset</span></a></li>
-                                <li><a class="link" href="#"><span class="un_user">Funny Jokeings</span></a></li>
-                                <li><a class="link" href="#"><span class="un_user">Enjoykin Broth</span></a></li>
-                                <li><a class="link" href="#"><span class="un_user">Filya Kucherya</span></a></li>
-                                <li><a class="link" href="#"><span class="un_user">Nthg rly matters to me</span></a></li>
+                                <li><a class="link__user" href="#"><i class="icon-user--active"></i>Yura Matsiulka</a></li>
+                                <li><a class="link__user" href="#"><i class="icon-user--active"></i>Keck Greateset</a></li>
+                                <li><a class="link__user" href="#"><i class="icon-user--active"></i>Funny Jokeings</a></li>
+                                <li><a class="link__user" href="#"><i class="icon-user--active"></i>Enjoykin Broth</a></li>
+                                <li><a class="link__user" href="#"><i class="icon-user--active"></i>Filya Kucherya</a></li>
+                                <li><a class="link__user" href="#"><i class="icon-user--active"></i>Nthg rly matters to me</a></li>
+                                <li><a class="link__bot" href="#"> <i class="icon-bot--active"></i>SlackerBot=)</a></li>
                             </ul>
                         </div>
                     </div>
+                    
+                    
+
                 </div>
             </div>
             <!-- Left-sidebar end -->
