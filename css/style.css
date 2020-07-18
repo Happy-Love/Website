@@ -81,24 +81,44 @@ body span{
     flex-direction: column; 
 }
 .user_info{   
-    max-height: 115px;   
+    min-height: 115px;   
     padding:20px 20px 20px 20px;
     background:#3F0E40;
      
 }
+.user_info:hover{
+    background-color:#350D36;
+    cursor: pointer;
+}
+.user_info:target{
 
+}
+.user_info:hover>.user>.user_name>span{
+    color:white;
+}
 .user_title{
     display:flex;
     color:white;   
 }
 .user_name{
     display:inline-flex;
-    color:white;
+    align-items: center;
+    color:#BEADBE;
+    font-size: 22px;
 }
-.user_img{
-    width:60px;
-    height:60px;
-    border-radius:50%; 
+.user_tooltip{
+    border-radius:50%;
+    padding:15px;
+    background-color: white;
+    display:inline-flex;
+    justify-content: center;
+    z-index: 3;
+    position:relative;
+}
+
+.svg_icon{
+    color: #3F0E40;
+    fill: #3F0E40;
 }
 .user{
     display:flex;
@@ -148,15 +168,6 @@ body span{
     vertical-align: middle;
     font-size:12px;
 }
-.list li a.link__private::before{
-    font-family: "Font Awesome 5 Free";
-    content: "\f023";
-    display: inline-block;
-    padding-right: 10px;
-    vertical-align: middle;
-    font-size:12px;
-    font-weight: 600;
-}
     
 /*user_nav end*/
 
@@ -197,16 +208,7 @@ body span{
     flex-wrap:wrap;
     padding:40px;
 }
-.icon-add::before{
-    font-family: "Font Awesome 5 Free";
-    vertical-align: middle; 
-    display:inline-block;
-    font-size:15px;
-    color:#BEADBE;
-    font-style:normal;
-    font-weight: 600;
-    content:'\f067';
-}
+
 
 /* Left-sidebar end */
 /* Middle-sidebar start */
@@ -268,8 +270,9 @@ body span{
     display:flex;
     position:relative;
     width:100%;
-    
-    
+}
+.empty{
+    width:318px;
 }
 .create-message{
     position:relative;
@@ -324,6 +327,9 @@ body span{
     }
     .middle-sidebar{
         width:100%;
+    }
+    .empty{
+        display:none;
     }
   
 }
@@ -397,17 +403,22 @@ border:1px solid #614261;
     color:white !important;
     width:100%;
 }
+
+
 .icon-threads::before,.icon-mentions::before,
 .icon-drafts::before,.icon-people::before,
 .icon-files::before,.icon-apps::before,
-.icon-bot--active:before, .icon-user--active:before{
+.icon-bot--active:before, .icon-user--active:before,
+.icon-add::before,.icon-private,
+.icon-add-down::before,
+.icon-public{
     display:inline-block;
     font-family: "Slack v2";
     font-style: normal;
     font-weight: 400;
-    font-size:20px !important;
+    font-size: 20px !important;
     color:#BEADBE;
-    vertical-align: middle;
+    align-items: center;
     padding-right: 10px;
 }
 .icon-threads::before{
@@ -428,12 +439,25 @@ border:1px solid #614261;
 .icon-files::before{
     content: "\E107";
 }
-
 .icon-user--active:before{
     content: "\E508";
     color:#2BAC76;
 }
 .icon-bot--active:before{
     content: "\E515";
-    color:#2BAC76;
+    color:#47B2E0;
 }
+.icon-add-down::before{
+    content:"\E281";
+}
+.icon-add::before{
+    padding-right:0 !important;
+    content:"\E279";
+}
+.icon-public::before{
+    content:"\E125";
+}
+.icon-private::before{
+    content:"\E567";
+}
+
