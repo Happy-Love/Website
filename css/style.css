@@ -67,22 +67,23 @@ body span{
 }
 .container{
     width:100%;
-     
     margin: 0 auto;
     display:flex;
-    height:100vh;
+    height:calc(100vh);
     min-height: 100%;
     align-items:stretch;
     justify-content: center;
 
 }
- 
+body{overflow: hidden;
+     }
 /* Left-sidebar start */
 .left-sidebar{
     min-width: 288px;
     display:flex;
     flex-wrap:nowrap;
     flex-direction: column; 
+    overflow-y: auto;
 }
 .user_info{   
     min-height: 115px;   
@@ -170,9 +171,11 @@ body span{
 }
     
 /*user_nav end*/
-
+.min{
+    min-height:auto;
+}
 .user_channels{
-    height:auto;
+    padding-bottom:50px;
     margin: 0;
     background:#3F0E40;
     flex-grow: 1;
@@ -211,6 +214,17 @@ body span{
 
 /* Left-sidebar end */
 /* Middle-sidebar start */
+ 
+.img_section{
+    position:  relative;
+    display:   flex;
+    min-width: 50px;
+    min-height:50px;
+    display:inline-block; 
+}
+.user_img{
+   
+}
 .middle-sidebar{
     width: 692px; 
     display:flex;
@@ -231,14 +245,20 @@ body span{
     border-bottom: 1px solid #E2E2E2;
 }
 .chat_history{
+    position:relative;
+    display:flex;
     flex-grow:1;
-    height: 500px;
     padding:20px; 
-    overflow-y: scroll;
+    overflow-y: auto;
+    flex-direction: column;
+    
+     
 }
 .sender{
-    padding:20px;
     display:flex;
+}
+.chat_history__wrapper{
+    margin-top:auto;
 }
 .slacker_title{
     font-weight: bold;
@@ -251,25 +271,28 @@ body span{
     line-height: 19px;
 }
 .description{
-    padding:0 20px 20px 20px;
+    position: relative;
+    padding:0 36px 36px 36px;
+    max-width:1920px;
+   
 }
 .ml-10{
     margin-right:10px;
 }
 .chat_message{
     background: #FFFFFF;  
-    margin-top:auto;
+    
     display:flex;
-    align-items: center; 
-    justify-content: center; 
+    
     background: rgba(127, 135, 145, 0.137);
-    padding:40px;
+    padding:20px;
+    padding-bottom:80px;
 }
 
 .input-group{
     display:flex;
     position:relative;
-    width:100%;
+    width:100%;  
 }
 .empty{
     width:318px;
@@ -311,6 +334,18 @@ body span{
 .send-message-btn{
     margin-left:5px;
 }
+.message_list_day{
+   margin-bottom:60px;
+   position:relative;
+}
+hr{
+    position:absolute;
+    background-color: crimson;
+    padding:1px;
+    border:none;
+    width:100%;
+}
+ 
 
 
 
@@ -319,9 +354,7 @@ body span{
 
 
 
-
-
-@media (max-width:900px){
+@media (max-width:1080px){
     .left-sidebar{
         display:none;
     }
@@ -331,9 +364,48 @@ body span{
     .empty{
         display:none;
     }
+    .chat_info{
+        min-height:50px !important;
+    }
   
 }
+@media (max-width:560px){
+ header{display:none !important;}
  
+}
+button span{
+    text-align: center;
+    color:black;
+    font-size: 20px;
+    
+}
+.separator{
+    border: 1px solid red;
+    
+}
+.separator-absolute{
+    position: relative;
+    border: 2px solid red;
+    width: 100%;
+    margin-bottom:auto;
+}
+.message_time{
+    position: relative;
+    width:100%;
+    text-align: center;
+}
+.btn-white{
+    position: absolute;
+    border: 2px solid #ECECEC;
+    background:white;
+    border-radius: 10px;
+    padding:10px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    margin:auto;
+    z-index: 1;
+} 
 .header{
     max-width:100%;
     width: 100%;
