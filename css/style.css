@@ -599,6 +599,7 @@ button span{
 .icon-strikethrough::before,.icon-code::before,
 .icon-link::before,.icon-numbered-list::before,.icon-bullet-list::before,
 .icon-quote-post::before,.icon-code-block::before,
+.icon-send-message::before,
 .icon-public::before{
     display:inline-block;
     font-family: "Slack v2";
@@ -690,6 +691,9 @@ button span{
     content: "\E15B";
     color: rgb(43, 42, 42);
 }
+.icon-send-message::before{
+    content:"\E543";
+}
 .btn-style-message{
     position: relative;
     width:32px;
@@ -724,7 +728,6 @@ button span{
     width: 100%;
     bottom: 0;
     z-index: 2000;
-     
 }
 .message_icons_wrapper_border{
     border-top:1px solid #DDDDDD;
@@ -734,20 +737,22 @@ button span{
     padding:42px;
     width:100%;
     padding-top:3px;
-    
-     
 }
 .message_icons-inner--align{
     width:20px;
     height:20px;
 }
 .message_icons--background{
-     background-color: #E5E5E5;
-     white-space: nowrap;
-     clear: both;
-     overflow: hidden;
-     border-radius:5px;      
+    display:flex;
+    background-color: #E5E5E5;
+    white-space: nowrap;
+    clear: both;
+    
+    border-radius:5px;   
+    justify-content: space-between;
+    align-items: center;   
 }
+
 .vertical{
     margin: 4px 0 4px 4px;
     border-radius: 0;
@@ -755,4 +760,22 @@ button span{
 }
 button.vertical:hover{
     border-right:1px solid white;
+}
+.message_things{
+    display: inline-block;
+    overflow: hidden;
+    
+}
+.message-send--icons{
+    display: inline-block;
+    right:0;
+    z-index:5000;
+    background: transparent;
+    overflow: visible;
+}
+.background-green{
+    background-color: #007a5a;
+}
+button.background-green i::before{
+    color:white !important;
 }
