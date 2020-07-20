@@ -293,6 +293,7 @@ body{
 
 .channel_info--functions{
     padding-top:10px;
+    padding-bottom:10px;
     display:flex;
     align-items: center;
 }
@@ -510,12 +511,12 @@ button span{
    
     border-radius: 10px;
     background-color:white;
-    color:grey;
-    font-weight: 600;
+    color:#0259b6;
+    font-weight: 500;
     border: 1px solid white;
 } 
 .btn-style-add-topic:hover{
-    background:grey;
+    background:#0259b6;
     color:white;
     transition: transform .2s ease-in-out;  
 }
