@@ -16,7 +16,7 @@ button{
     border:none;
    
 }
-ul,li,a,span{
+ul,li,a{
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -272,8 +272,29 @@ body{
     padding:20px 20px 20px 20px;
 }
 .channel_info{
+    display: inline-block;
     font-weight: bold;
     font-size: 18px;
+}
+.channel_users_count{
+    display: inline-block;
+}
+.channel_users_count::before{
+    content:"\E003";
+    padding-right:3px !important;
+    padding-left:10px;
+    color:black !important;
+}
+
+.channel_info--users{
+    display:flex;
+    align-items: center;
+}
+
+.channel_info--functions{
+    padding-top:10px;
+    display:flex;
+    align-items: center;
 }
 .block1{
     border-bottom: 1px solid #E2E2E2;
@@ -305,6 +326,7 @@ body{
     margin-top:auto;
 }
 .slacker_title{
+    display:inline-block;
     font-weight: bold;
     font-size: 20px;
     line-height: 23px;
@@ -314,6 +336,19 @@ body{
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
+}
+.slacker_time_of_send{
+    display:inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 23px;
+    color:grey;
+    margin-left:10px;
+    vertical-align: center;
+}
+.slacker_data{
+    display:flex;
+    align-items: center;
 }
 .description{
     position: relative;
@@ -343,7 +378,7 @@ body{
 }
 .create-message-wrapper{
  
-     border:1px solid #616061;
+    border:1px solid #616061;
     border-radius:10px;
     flex-grow:1;
     width:100%;
@@ -423,18 +458,17 @@ hr{
         display:none;
     }
     .chat_info{
-        min-height:50px !important;
+        min-height:auto;
+      
     }
-  
+    .channel_info--functions, .channel_info--users{display:inline-block;}
 }
 @media (max-width:560px){
  header{display:none !important;}
  
 }
 button span{
-    
     font-size: 20px;
-    
 }
 .separator{
     position: relative;
@@ -471,7 +505,20 @@ button span{
     margin:auto;
     z-index: 1;
     
+}
+.btn-style-add-topic{
+   
+    border-radius: 10px;
+    background-color:white;
+    color:grey;
+    font-weight: 600;
+    border: 1px solid white;
 } 
+.btn-style-add-topic:hover{
+    background:grey;
+    color:white;
+    transition: transform .2s ease-in-out;  
+}
 .header{
     
     width: 100%;
@@ -541,7 +588,7 @@ button span{
     width:100%;
 }
 
-
+.channel_users_count::before,
 .icon-threads::before,.icon-mentions::before,
 .icon-drafts::before,.icon-people::before,
 .icon-files::before,.icon-apps::before,
@@ -651,7 +698,8 @@ button span{
     justify-content: center;
     align-items: center;  
     z-index: 2000;
-    background-color: white;
+    background-color: #E5E5E5;
+    
 }
 .btn-style-message:hover{
     background:#1264A3;
@@ -665,7 +713,7 @@ button span{
 .message_icons_wrapper{ 
     position: absolute;
     left: 0;
-    height:41px;
+    height:48px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding-left: 1px;
@@ -683,9 +731,10 @@ button span{
     overflow: visible;
 }
 .message_icons--align{
-    padding:43px;
+    padding:42px;
     width:100%;
-    padding-top:4px;
+    padding-top:3px;
+    
      
 }
 .message_icons-inner--align{
@@ -693,9 +742,17 @@ button span{
     height:20px;
 }
 .message_icons--background{
-     background-color: white;
+     background-color: #E5E5E5;
      white-space: nowrap;
      clear: both;
      overflow: hidden;
+     border-radius:5px;      
 }
- 
+.vertical{
+    margin: 4px 0 4px 4px;
+    border-radius: 0;
+    border-right:1px solid rgb(175, 175, 175);    
+}
+button.vertical:hover{
+    border-right:1px solid white;
+}
