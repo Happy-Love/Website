@@ -254,7 +254,6 @@ body{
  
 .img_section{
     position:  relative;
-    display:   flex;
     min-width: 50px;
     min-height:50px;
     display:inline-block; 
@@ -489,6 +488,7 @@ button span{
 }
 .message_time{
     display:block;
+    position:relative;
     width:100%;
     text-align: center;
     margin-top:50px;
@@ -500,12 +500,17 @@ button span{
     background:white;
     border-radius: 10px;
     padding:10px;
-    top:center;
-    left:center;
+    vertical-align: middle;
+     
+    left:50%;
     transform:translate(-50%, -50%);
     margin:auto;
     z-index: 1;
     
+}
+.user_img{
+    width:50px;
+    height:50px;
 }
 .btn-style-add-topic{
    
