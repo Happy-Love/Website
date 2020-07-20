@@ -30,5 +30,7 @@ for (let i = 0; i < coll.length; i++) {
 }
 
  
+let chat=document.getElementById('chat');
+chat.scrollTop=chat.scrollHeight;
  
  
